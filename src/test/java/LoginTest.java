@@ -1,3 +1,5 @@
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -27,6 +29,17 @@ public class LoginTest extends Base {
         MainPage b = new MainPage(driver);
         Assert.assertTrue(b.getLogo().isDisplayed());
         Thread.sleep(5000);
+        b.filterBtn().click();
+
+//        b.RequestBtn().click();
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        String controlSelect = "return document.getElementById(\"formControlsSelect\").value;";
+        String text = (String)js.executeScript(controlSelect);
+        System.out.println(text);
+
+        b.ApplyBtn().click();
+        Thread.sleep(3000);
     }
 
     @AfterTest
