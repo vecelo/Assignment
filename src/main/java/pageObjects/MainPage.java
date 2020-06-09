@@ -16,8 +16,31 @@ public class MainPage {
     @FindBy (xpath = "//a[@class='navbar-brand']")
     WebElement Logo;
 
+    @FindBy (css = "button.btn-filter")
+    WebElement filterBtn;
+
+    @FindBy (id = "formControlsSelect")
+    WebElement requestBtn;
+
+    @FindBy (css = "button.btn:last-child")
+    WebElement applyBtn;
+
     public WebElement getLogo() {
         return Logo;
     }
+
+    public WebElement filterBtn(){
+        return filterBtn;
+    }
+
+    public WebElement RequestBtn(){
+        return filterBtn;
+    }
+
+    public WebElement ApplyBtn(){
+        return applyBtn;
+    }
+
+
 }
 
