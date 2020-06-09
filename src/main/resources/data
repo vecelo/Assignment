@@ -1,0 +1,32 @@
+1. Provide the ONE XPath to return the requests which are submitted and approved in 2019 (Request Status = Approved && Date Submitted = 2019)
+
+|| approved || ngay 2019 || kira || System||age 2015||
+|| approved || ngay 2018 || kiki || System||age 2016||
+|| inactvie || ngay 2019 || rika || System||age 2017||
+
+
+//td[@class='td-request-approved uppercase']/following-sibling::td[contains(.,'2019')]/parent::tr
+=======> ko chinh xac vi td se lay luon age 201x / ko nen dung . trong [contains(.,'2019')]
+
+
+//td[@class='td-request-approved uppercase']/following-sibling::td/div[contains(text(),'2019')]/ancestor::tr
+=======> chinh xac nhat
+
+ancestor to tien > parent cha me
+
+											/following-sibling::td = lấy col kế bên   /ancestor::tr = lon nguoc ra ngoai lay tr (la col dau tien)
+
+
+
+Main page
+
+[Admin] ======= cssSelector = #basic-nav-dropdown
+							@FindBy(css="#basic-nav-dropdown")
+
+
+[Filter]========			= button.btn-filter
+
+
+ko phai Popup > xu ly binh thuong 		>>>>>				RequestStatus 		select#formControlsSelect.form-control
+															Apply Filter		button.btn:last-child
+															Cancel				//button[contains(text(),'Cancel')]			xpath
