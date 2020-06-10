@@ -20,7 +20,7 @@ public class LoginPage {
     WebElement password;
 
     @FindBy(xpath ="//a[@class='col-login__btn']")
-    WebElement Loginbtn;
+    WebElement LoginLink;
 
     public WebElement username(){
         return username;
@@ -31,9 +31,12 @@ public class LoginPage {
     }
 
     public WebElement Loginbtn(){
-        return Loginbtn;
+        return LoginLink;
     }
 
-
-
+    public void Login(WebDriver driver, String login,String pass) {
+        username.sendKeys(login);
+        password.sendKeys(pass);
+        Loginbtn().click();
+        }
 }

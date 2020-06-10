@@ -3,8 +3,11 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="Assignment">
         <classes>
-        <class name="LoginTest"/>
+            <class name="TestChallenge">
+<!--                <methods>-->
+<!--                    <include name="testFirstNameColumn" />-->
+<!--                </methods>-->
+            </class>
         </classes>
-
     </test>
 </suite>

@@ -19,8 +19,11 @@ public class MainPage {
     @FindBy (css = "button.btn-filter")
     WebElement filterBtn;
 
-    @FindBy (id = "formControlsSelect")
+    @FindBy (xpath = "//select[@id = \"formControlsSelect\"]")
     WebElement requestBtn;
+
+    @FindBy (xpath = "//a[@class = \"query__filter__item\"]")
+    WebElement requestSts;
 
     @FindBy (css = "button.btn:last-child")
     WebElement applyBtn;
@@ -33,12 +36,21 @@ public class MainPage {
         return filterBtn;
     }
 
-    public WebElement RequestBtn(){
-        return filterBtn;
+    public WebElement requestBtn(){
+        return requestBtn;
     }
+
+    public WebElement getRequestSts() {
+        return requestSts;
+    }
+
 
     public WebElement ApplyBtn(){
         return applyBtn;
+    }
+
+    public boolean isParentPortalOpened(){
+        return Logo.getText().toString().contains("[ Parent Portal ]");
     }
 
 
