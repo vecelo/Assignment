@@ -27,6 +27,6 @@ Main page
 [Filter]========			= button.btn-filter
 
 
-ko phai Popup > xu ly binh thuong 		>>>>>				RequestStatus 		select#formControlsSelect.form-control
+ko phai Popup > xu ly binh thuong 		>>>>>				RequestStatus 		select#formControlsSelect.form-control      ko xai duoc >>> chuyen qua xpath //select[@id = "formControlsSelect"]
 															Apply Filter		button.btn:last-child
 															Cancel				//button[contains(text(),'Cancel')]			xpath
