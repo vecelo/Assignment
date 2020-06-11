@@ -2,8 +2,11 @@ package pageObjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import java.util.List;
 
 public class MainPage {
     public WebDriver driver;
@@ -19,6 +22,9 @@ public class MainPage {
     @FindBy (css = "button.btn-filter")
     WebElement filterBtn;
 
+    @FindBy (css = "th.sort-column[title=\"First Name\"]")
+    WebElement sortFirstName;
+
     @FindBy (xpath = "//select[@id = \"formControlsSelect\"]")
     WebElement requestBtn;
 
@@ -28,9 +34,11 @@ public class MainPage {
     @FindBy (css = "button.btn:last-child")
     WebElement applyBtn;
 
-    public WebElement getLogo() {
-        return Logo;
-    }
+    @FindBy (css = "table tr td:nth-child(2) div")
+    List<WebElement> firstColumn;
+
+    @FindBy (css = "table tr td:nth-child(6)")
+    List<WebElement> firstnameColumn;
 
     public WebElement filterBtn(){
         return filterBtn;
@@ -40,13 +48,20 @@ public class MainPage {
         return requestBtn;
     }
 
-    public WebElement getRequestSts() {
-        return requestSts;
-    }
-
-
     public WebElement ApplyBtn(){
         return applyBtn;
+    }
+
+    public WebElement getSortFirstName(){
+        return sortFirstName;
+    }
+
+    public List<WebElement> getFirstColumn() {
+        return firstColumn;
+    }
+
+    public List<WebElement> getFirstnameColumn() {
+        return firstnameColumn;
     }
 
     public boolean isParentPortalOpened(){
