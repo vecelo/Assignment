@@ -1,9 +1,14 @@
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentReporter;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pageObjects.Base;
 import pageObjects.LoginPage;
@@ -65,13 +70,13 @@ public class FirstnameSort extends Base {
         //Compare drafList with sourceList
         Assert.assertTrue(sourceList.equals(draftList));
 
-
     }
 
 
     @AfterTest
     public void tearDown(){
         driver.close();
+        rp11.flush();
     }
 
 }

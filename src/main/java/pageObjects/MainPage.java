@@ -37,6 +37,9 @@ public class MainPage {
     @FindBy (css = "table tr td:nth-child(2) div")
     List<WebElement> firstColumn;
 
+    @FindBy (xpath = "//td[@class='td-request-approved uppercase']/following-sibling::td/div[contains(text(),'2019')]/ancestor::tr")
+    List<WebElement> xpathQuery;
+
     @FindBy (css = "table tr td:nth-child(6)")
     List<WebElement> firstnameColumn;
 
@@ -62,6 +65,10 @@ public class MainPage {
 
     public List<WebElement> getFirstnameColumn() {
         return firstnameColumn;
+    }
+
+    public List<WebElement> getXpathQuery() {
+        return xpathQuery;
     }
 
     public boolean isParentPortalOpened(){

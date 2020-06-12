@@ -7,6 +7,7 @@
         <classes>
             <class name="FilterInactive"/>
             <class name="FirstnameSort"/>
+            <class name="XpathProven"/>
         </classes>
     </test>
 </suite>

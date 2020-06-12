@@ -53,6 +53,15 @@
             <version>6.0.0</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>4.1.6</version>
+        </dependency>
+
+
+
 
     </dependencies>
 
