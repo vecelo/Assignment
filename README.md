@@ -29,6 +29,9 @@ Notepad++ ||||
 
 ## 4. Setup for IntelliJ IDEA
 
+## 5. Import Project from Version Control with Github link
+<https://github.com/hungmt/Assignment.git>
+
 ## Additional resources   
 If you are using Chrome version 83, download ChromeDriver here
 
