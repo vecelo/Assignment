@@ -1,3 +1,4 @@
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -15,13 +16,14 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class XpathProven extends Base {
+    public WebDriver driver;
 
     @BeforeTest
     public void setUpDriver() throws IOException {
         driver = intializeDriver();
         driver.get(urlTesting);
         LoginPage lp = new LoginPage(driver);
-        lp.Login(driver, " ", " ");
+        lp.Login(driver, "", "");
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 

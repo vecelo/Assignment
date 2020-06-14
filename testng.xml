@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite" parallel="tests">
-<!--    <parameter name="login" value="admin@test.com"/>-->
-<!--    <parameter name="pass" value="test123"/>-->
+<suite name="All Test Suite" parallel="tests" >
+<listeners>
+    <listener class-name="Listeners"/>
+</listeners>
     <test verbose="2" preserve-order="true" name="Assignment">
         <classes>
             <class name="FilterInactive"/>

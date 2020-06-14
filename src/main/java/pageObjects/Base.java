@@ -1,8 +1,12 @@
 package pageObjects;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
@@ -34,6 +38,15 @@ public class Base {
             driver = new ChromeDriver();
         }
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        driver.manage().window().maximize();
         return driver;
+    }
+
+    public void getScreenShotPath(String testcaseName, WebDriver driver) throws IOException {
+        //This is general code to take screen shot
+        TakesScreenshot chh = (TakesScreenshot)driver;
+        File sourceFolder = chh.getScreenshotAs(OutputType.FILE);
+        String targetFile = System.getProperty("user.dir")+"\\reports\\"+testcaseName+".png";
+        FileUtils.copyFile(sourceFolder, new File(targetFile));
     }
 }
