@@ -33,6 +33,9 @@ Notepad++ ||||
 <https://github.com/hungmt/Assignment.git>
 
 ## Additional resources   
-If you are using Chrome version 83, download ChromeDriver here
+If you are using Chrome version 83, download ChromeDriver here and stored in <Your folder>\Assignment\src\main\resources\
 
     <https://chromedriver.storage.googleapis.com/83.0.4103.39/chromedriver_win32.zip>
+
+## Report and screenshot
+The Test Report and Screenshot is stored in <Your folder>\Assignment\reports
