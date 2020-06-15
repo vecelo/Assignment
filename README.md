@@ -28,7 +28,7 @@ Notepad++ ||||
 ## 3. Setup variable enviroment for MAVEN, JAVA JDK
 
 ## 4. Manual Testcases
-Karros_Testcase.xlsx
+[Manual Testcase and Bugs report](Karros_Testcase.xlsx)
 
 ## 5. Import Project from Version Control with Github link
 <https://github.com/hungmt/Assignment.git>
