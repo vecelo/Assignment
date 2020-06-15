@@ -39,3 +39,30 @@ If you are using Chrome version 83, download ChromeDriver here and stored in <Yo
 
 ## Report and screenshot
 The Test Report and Screenshot is stored in <Your folder>\Assignment\reports
+ 
+## API Testing by Postman
+- Verify the status response is 200 (successful)
+- Verify the Header/Content-Type is present
+- Verify the JSON response "id" = 1 and "title" = Post 1
+}
+
+```javascript
+const responseJson = pm.response.json();
+
+    pm.test("Status code is 200", function () {
+        pm.response.to.have.status(200);
+    });
+
+    pm.test("Verify the Content-Type is present", function(){
+        pm.response.to.have.header("Content-Type");
+    });
+
+    pm.test("Verify value of id", function () {
+        pm.expect(responseJson.id).to.eql(1);
+        pm.expect(responseJson.title).to.eql("Post 1");
+    });
+
+    pm.test("Verify value of title", function () {
+        pm.expect(responseJson.title).to.eql("Post 1");
+    });
+```
