@@ -7,8 +7,8 @@
     <test verbose="2" preserve-order="true" name="Assignment">
         <classes>
             <class name="FilterInactive"/>
-            <class name="FirstnameSort"/>
-            <class name="XpathProven"/>
+<!--            <class name="FirstnameSort"/>-->
+<!--            <class name="XpathProven"/>-->
         </classes>
     </test>
 </suite>

@@ -54,7 +54,7 @@ public class FilterInactive extends Base {
             sample.add(name);
         }
 
-        Assert.assertFalse(sample.contains("Inactive"));
+        Assert.assertTrue(sample.contains("Inactive"));
         }
 
 
